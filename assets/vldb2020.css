@@ -1,0 +1,26 @@
+#toppage-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    background: url('assets/media/toppage-background.jpg') no-repeat;
+    background-size: cover;
+}
+
+#toppage-contents {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+#toppage-wrap {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(-45deg, rgba(4, 114, 124, 0.4), rgba(17, 66, 99, 0.6));
+}
