@@ -69,8 +69,7 @@ svg>rect {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
+    transform: translateX(calc((100% - 100vw) / 2));
     z-index: -1000;
 }
 
