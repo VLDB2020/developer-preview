@@ -72,8 +72,6 @@ svg>rect {
     width: auto;
     height: auto;
     z-index: -1000;
-    background: url('media/toppage-background.jpg') no-repeat;
-    background-size: cover;
 }
 
 #toppage-contents {
