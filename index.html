@@ -8,23 +8,40 @@
 
     <title></title>
 
+    <link rel="stylesheet" href="https://use.typekit.net/swd6kdu.css">
     <link rel="stylesheet" href="assets/vldb2020.css">
     <!-- link rel="icon" href="images/favicon.png"-->
     <link rel="canonical" href="http://vldb2020.org/">
 </head>
 
 <body>
-    <div id="toppage-wrap">
-    </div>
-    <div id="toppage-video">
-        <video poster="assets/media/toppage-background.jpg" autoplay loop>
-            <source src="assets/media/toppage-background.webm" type="video/webm">
-            <source src="assets/media/toppage-background.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div id="toppage-contents">
+    <!-- div id="toppage-wrap">
+    </div -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="100vw" height="100vh" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <text id="textVLDB" x="540" y="450">VLDB</text>
+            <text id="text2020" x="540" y="600">2020</text>
+            <text id="textTokyo" x="540" y="750">Tokyo</text>
+            <mask id="mask" x="0" y="0" width="1080" height="1080">
+                <rect x="0" y="0" width="1080" height="1080" />
+                <use xlink:href="#textVLDB"></use>
+                <use xlink:href="#text2020"></use>
+                <use xlink:href="#textTokyo"></use>
+            </mask>
+        </defs>
+        <rect x="0" y="0" width="1080" height="1080" />
+        <use class="textoutline" xlink:href="#textVLDB"></use>
+        <use class="textoutline" xlink:href="#text2020"></use>
+        <use class="textoutline" xlink:href="#textTokyo"></use>
+        <text x="540" y="305" id="textC" class="smalltext">45th International Conference on Very Large Data Bases</text>
+    </svg>
+    <video id="toppage-video" poster="assets/media/toppage-background.jpg" autoplay loop>
+        <source src="assets/media/toppage-background.webm" type="video/webm">
+        <!-- source src="assets/media/toppage-background.mp4" type="video/mp4" -->
+    </video>
+    <!-- div id="toppage-contents">
         <h1>VLDB2020 Tokyo</h1>
-    </div>
+    </div -->
 </body>
 
 </html>
