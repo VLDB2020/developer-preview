@@ -109,8 +109,8 @@ svg.toppage-wrap>rect {
 #toppage-contents>article {
     background-color: #a22041;
     margin: auto;
-    padding: 10px;
-    width: 100vw;
+    padding: 1.5vw;
+    width: 90vw;
     max-width: 800px;
     color: white;
 }
@@ -120,12 +120,12 @@ svg.toppage-wrap>rect {
 }
 
 #toppage-contents>article>h1 {
-    font-size: 2vw;
+    font-size: 24px;
     text-align:center;
 }
 
 #toppage-contents>article>h2 {
-    font-size: 1.5vw;
+    font-size: 20px;
     background-color:#3b7960;
     padding:1.5vw 0px;
     text-align:center;
@@ -133,14 +133,13 @@ svg.toppage-wrap>rect {
 
 #toppage-contents>article>p {
     font-weight: 100;
-    font-size: 1.5vw;
+    font-size: 20px;
     padding:0px 3vw;
     text-align: justify;
-    text-justifyinter-word;
-
-    @media (min-width: 600px) {
-        font-size: 18px;
-    }
+    text-justify:inter-word;
+}
+#toppage-contents>article>p>strong {
+    font-weight: 500;
 }
 
 svg.scroll-btn>rect {
