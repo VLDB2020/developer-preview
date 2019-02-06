@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title></title>
+    <title>VLDB2020 - 46th International Conference on Very Large Data Bases</title>
 
     <link rel="stylesheet" href="https://use.typekit.net/swd6kdu.css">
     <link rel="stylesheet" href="assets/vldb2020.css">
@@ -15,13 +15,12 @@
 </head>
 
 <body>
-    <!-- div id="toppage-wrap">
-    </div -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="100vh" height="100vh" preserveAspectRatio="xMidYMid slice">
+    <svg xmlns="http://www.w3.org/2000/svg" class="toppage-wrap" viewBox="0 0 1080 1080" width="100vh" height="100vh"
+        preserveAspectRatio="xMidYMid slice">
         <defs>
-            <text id="textVLDB" x="540" y="450">VLDB</text>
-            <text id="text2020" x="540" y="600">2020</text>
-            <text id="textTokyo" x="540" y="750">Tokyo</text>
+            <text id="textVLDB" x="540" y="465">VLDB</text>
+            <text id="text2020" x="540" y="585">2020</text>
+            <text id="textTokyo" x="540" y="705">Tokyo</text>
             <mask id="mask" x="0" y="0" width="1080" height="1080">
                 <rect x="0" y="0" width="1080" height="1080" />
                 <use xlink:href="#textVLDB"></use>
@@ -33,15 +32,40 @@
         <use class="textoutline" xlink:href="#textVLDB"></use>
         <use class="textoutline" xlink:href="#text2020"></use>
         <use class="textoutline" xlink:href="#textTokyo"></use>
-        <text x="540" y="305" id="textC" class="smalltext">45th International Conference on Very Large Data Bases</text>
+        <text x="540" y="345" id="textC" class="smalltext">46th International Conference on Very Large Data Bases</text>
     </svg>
     <video id="toppage-video" poster="assets/media/toppage-background.jpg" preload="auto" autoplay loop muted>
         <source src="assets/media/toppage-background.webm" type="video/webm">
         <source src="assets/media/toppage-background.mp4" type="video/mp4">
     </video>
-    <!-- div id="toppage-contents">
-        <h1>VLDB2020 Tokyo</h1>
-    </div -->
+    <input type="checkbox" id="toppage-toggle" _style="display:none;">
+    <div id="toppage-cnt">
+        <label class="menu-btn" for="toppage-toggle">
+            <div id="scroll-cnt">
+                <svg xmlns="http://www.w3.org/2000/svg" class="scroll-btn" viewBox="0 0 1000 1200" width="100%" height="100%"
+                    preserveAspectRatio="xMidYMid slice">
+                    <rect x="0" y="0" width="1000" height="1200" />
+                    <polyline points="200 700 500 1100 800 700" />
+                    <circle id="dot1" cx="500" cy="400" r="50" />
+                    <circle id="dot2" cx="500" cy="640" r="50" />
+                    <circle id="dot3" cx="500" cy="880" r="50" />
+                </svg>
+            </div>
+        </label>
+        <div id="toppage-contents">
+            <article>
+                <h1>46th International Conference on Very Large Data Bases</h1>
+                <h2>Shinjyuku, Tokyo - August 26-30, 2019</h2>
+                <p>
+                    VLDB is a premier annual international forum for data management and database researchers, vendors,
+                    practitioners, application developers, and users. The VLDB 2020 conference will feature research
+                    talks, tutorials, demonstrations, and workshops. It will cover issues in data management, database
+                    and information systems research, since they are the technological cornerstones of the emerging
+                    applications of the 21st century.
+                </p>
+            </article>
+        </div>
+    </div>
 </body>
 
 </html>

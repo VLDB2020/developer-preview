@@ -14,7 +14,7 @@ body {
     font-style: normal;
 }
 
-svg {
+svg.toppage-wrap {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -22,42 +22,41 @@ svg {
     font-family: museo, serif;
     font-weight: 900;
     font-style: normal;
-    font-size: 185px;
+    font-size: 150px;
 }
 
-svg .textoutline {
+svg.toppage-wrap .textoutline {
     stroke: white;
-    stroke-width: 0.02em;
+    stroke-width: 4px;
     stroke-linejoin: round;
     fill: none;
 }
 
-svg .smalltext {
-    font-size: 20px;
+svg.toppage-wrap .smalltext {
+    font-size: 18px;
     letter-spacing: 0px;
-    font-weight: 300;
+    font-weight: 100;
     stroke: none;
     fill: white;
 }
 
-svg #textVLDB {
-    letter-spacing: 10px;
+svg.toppage-wrap #textVLDB {
+    letter-spacing: 15px;
 }
 
-svg #text2020 {
-    text-indent: -15px;
-    letter-spacing: 30px;
+svg.toppage-wrap #text2020 {
+    letter-spacing: 25px;
 }
 
-svg #textTokyo {
-    letter-spacing: -4px;
+svg.toppage-wrap #textTokyo {
+    letter-spacing: -1px;
 }
 
-svg mask rect {
+svg.toppage-wrap mask rect {
     fill: rgba(255, 255, 255, 0.6);
 }
 
-svg>rect {
+svg.toppage-wrap>rect {
     fill: #203744;
     -webkit-mask: url(#mask);
     mask: url(#mask);
@@ -73,18 +72,115 @@ svg>rect {
     z-index: -1000;
 }
 
-#toppage-contents {
-    position: relative;
-    z-index: 1000;
-    display: flex;
+#toppage-cnt {
+    position: absolute;
+    left: 0px;
+    top: calc(100vh - 12vmin);
+    height: 62vmin;
     width: 100vw;
-    height: 100vh;
 }
 
-#toppage-wrap {
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(-45deg, rgba(112, 195, 202, 0.4), rgba(17, 66, 99, 0.6));
-    z-index: -999;
+#toppage-toggle:checked~#toppage-cnt {
+    transform: translateY(calc(-100vh + 12vmin));
+    transition: transform 0.8s cubic-bezier(.34, -0.29, .38, .8);
+}
+
+#toppage-toggle~#toppage-cnt {
+    transform: translateY(0);
+    transition: transform 0.8s cubic-bezier(.55, .02, .69, 1.15);
+}
+
+#scroll-cnt {
+    position: relative;
+    top: 0px;
+    left: 50%;
+    width: 10vmin;
+    height: 12vmin;
+    margin-left: -5vmin;
+    color: white;
+    cursor: pointer;
+}
+
+#toppage-contents {
+    overflow-y: auto;
+    height: calc(100vh - 12vmin);
+}
+
+#toppage-contents>article {
+    background-color: #a22041;
+    margin: auto;
+    padding: 10px;
+    width: 100vw;
+    max-width: 800px;
+    color: white;
+}
+
+#toppage-contents>article>:nth-child(0) {
+    margin-top: 0;
+}
+
+#toppage-contents>article>h1 {
+    font-size: 2vw;
+    text-align:center;
+}
+
+#toppage-contents>article>h2 {
+    font-size: 1.5vw;
+    background-color:#3b7960;
+    padding:1.5vw 0px;
+    text-align:center;
+}
+
+#toppage-contents>article>p {
+    font-weight: 100;
+    font-size: 1.5vw;
+    padding:0px 3vw;
+    text-align: justify;
+    text-justifyinter-word;
+
+    @media (min-width: 600px) {
+        font-size: 18px;
+    }
+}
+
+svg.scroll-btn>rect {
+    fill: #a22041;
+    fill-opacity: 0.9;
+}
+
+svg.scroll-btn>polyline {
+    fill: none;
+    stroke: white;
+    stroke-width: 60px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+svg.scroll-btn>circle {
+    fill: white;
+    stroke: none;
+}
+
+svg.scroll-btn #dot1 {
+    animation: bounce 1.3s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+    animation-delay: 0s;
+}
+
+svg.scroll-btn #dot2 {
+    animation: bounce 1.3s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+    animation-delay: 0.1s;
+}
+
+svg.scroll-btn #dot3 {
+    animation: bounce 1.3s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+    animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+    from, to {
+        transform: translateY(0px) scaleY(.98);
+    }
+    80% {
+        transform: translateY(-100px) scaleY(1.02);
+    }
 }
