@@ -8,12 +8,16 @@
 
     <title>VLDB2020 - 46th International Conference on Very Large Data Bases</title>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.typekit.net/swd6kdu.css">
-    <link rel="stylesheet" href="assets/vldb2020.css">
+    <link rel="stylesheet" href="//use.typekit.net/swd6kdu.css">
+    <link rel="stylesheet/less" type="text/css" href="assets/vldb2020.less" />
+    <link rel="stylesheet/less" type="text/css" href="assets/fluidable.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js" integrity="sha256-pD9KZEZQimTLQOMTT99lBhGT7AXyMPz3g92G1iyd470=" crossorigin="anonymous"></script>
     <!-- link rel="icon" href="images/favicon.png"-->
-    <link rel="canonical" href="http://vldb2020.org/">
+    <link rel="canonical" href="https://vldb2020.org/">
 </head>
 
 <body>
@@ -40,7 +44,7 @@
         <source src="assets/media/toppage-background.webm" type="video/webm">
         <source src="assets/media/toppage-background.mp4" type="video/mp4">
     </video>
-    <input type="checkbox" id="toppage-toggle" _style="display:none;">
+    <input type="checkbox" id="toppage-toggle" style="display:none;">
     <div id="toppage-cnt">
         <label class="menu-btn" for="toppage-toggle">
             <div id="scroll-cnt">
@@ -69,7 +73,8 @@
                 <h1>VLDB2020 Venue</h1>
                 <ul class="fa-ul">
                     <li><span class="fa-li"><i class="fas fa-hotel"></i></span><strong>Keio Plaza Hotel Tokyo</strong></li>
-                    <li><span class="fa-li"><i class="fas fa-map"></i></span>2-2-1 Nishi-Shinjuku, Shinjuku-Ku, Tokyo 160-8330 Japan</li>
+                    <li><span class="fa-li"><i class="fas fa-map"></i></span>2-2-1 Nishi-Shinjuku, Shinjuku-Ku, Tokyo
+                        160-8330 Japan</li>
                     <li><span class="fa-li"><i class="fas fa-phone"></i></span>+81 3 3344 0111</li>
                 </ul>
             </article>
