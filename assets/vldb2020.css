@@ -25,6 +25,10 @@ svg.toppage-wrap {
     font-size: 150px;
 }
 
+ul.venue {
+    list-style: none;
+}
+
 svg.toppage-wrap .textoutline {
     stroke: white;
     stroke-width: 4px;
@@ -121,23 +125,24 @@ svg.toppage-wrap>rect {
 
 #toppage-contents>article>h1 {
     font-size: 24px;
-    text-align:center;
+    text-align: center;
 }
 
 #toppage-contents>article>h2 {
     font-size: 20px;
-    background-color:#3b7960;
-    padding:1.5vw 0px;
-    text-align:center;
+    background-color: #3b7960;
+    padding: 1.5vw 0px;
+    text-align: center;
 }
 
 #toppage-contents>article>p {
     font-weight: 100;
     font-size: 20px;
-    padding:0px 3vw;
+    padding: 0px 3vw;
     text-align: justify;
-    text-justify:inter-word;
+    text-justify: inter-word;
 }
+
 #toppage-contents>article>p>strong {
     font-weight: 500;
 }
