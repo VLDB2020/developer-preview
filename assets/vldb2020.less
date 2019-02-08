@@ -1,7 +1,12 @@
+@import "fluidable";
 //-- Basic Color Scheme
 @color-white: white;
 @color-red: #a22041;
+@color-violet: #9d5b8b;
+@color-blue: #5654a2;
 @color-green: #3b7960;
+@color-lightgreen: #938b4b;
+@color-orange: #f8b500;
 //
 //--Main Font
 @main-font: museo, serif;
@@ -17,17 +22,34 @@
 @logo-font-color: @color-white;
 @logo-smallfont-size: 16px;
 //--
+//-- Menu Bar
+@menu-bgcolor: #f3f3f2;
+@submenu-bgcolor:#393f4c;
+@menu-shadowcolor: rgba(0, 0, 0, 0.4);
+@menu-lineheight: 8px;
+@color-conference: @color-red;
+@color-contributions: @color-violet;
+@color-sponsorship: @color-blue;
+@color-information: @color-green;
+@color-4authors: @color-lightgreen;
+@color-4participants: @color-orange;
+//--
 //-- Top Page Settings
 @topmask-opacity: 0.6;
 @topmask-color: #203744;
 @topcontents-bgcolor: @color-red;
 @topcontents-accolor: @color-green;
-@topscrollbtn-height: 12vmin;
-@topscrollbtn-wieth: 10vmin;
-@topscrollbtn-amination:cubic-bezier(0.30, 2.40, 0.85, 2.50);
-@topscrollbtn-color:@color-white;
+@topscrollbtn-width: 50px;
+@topscrollbtn-height: @topscrollbtn-width * 1.2;
+@topscrollbtn-amination: cubic-bezier(0.30, 2.40, 0.85, 2.50);
+@topscrollbtn-color: @color-white;
 //--
-//--
+//-- Z Indeies
+@z-menu: 100;
+@z-submenu: 99;
+@z-bg: -100;
+@z-bgmask: -99;
+@z-contents: 0;
 html, div, body, article {
     margin: 0;
 }
@@ -41,6 +63,36 @@ html {
 body {
     font-family: @main-font;
     font-weight: @main-font-weight;
+    font-style: normal;
+}
+
+.bgcol-conference {
+    background-color: @color-conference;
+}
+
+.bgcol-contributions {
+    background-color: @color-contributions;
+}
+
+.bgcol-sponsorship {
+    background-color: @color-sponsorship;
+}
+
+.bgcol-information {
+    background-color: @color-information;
+}
+
+.bgcol-4authors {
+    background-color: @color-4authors;
+}
+
+.bgcol-4participants {
+    background: @color-4participants;
+}
+
+.logo-font {
+    font-family: @logo-font;
+    font-weight: @logo-font-weight;
     font-style: normal;
 }
 
@@ -61,6 +113,7 @@ svg.toppage-wrap {
     font-weight: @logo-font-weight;
     font-style: normal;
     font-size: @logo-font-size;
+    z-index: @z-bgmask;
 }
 
 svg.toppage-wrap .textoutline {
@@ -107,15 +160,15 @@ svg.toppage-wrap>rect {
     min-width: 100%;
     min-height: 100%;
     transform: translateX(calc((100% - 100vw) / 2));
-    z-index: -1000;
+    z-index: @z-bg;
 }
 
 #toppage-cnt {
     position: absolute;
     left: 0px;
     top: calc(100vh - @topscrollbtn-height);
-    height: 62vmin;
     width: 100vw;
+    z-index: @z-contents;
 }
 
 #toppage-toggle:checked~#toppage-cnt {
@@ -128,13 +181,83 @@ svg.toppage-wrap>rect {
     transition: transform 0.8s cubic-bezier(.55, .02, .69, 1.15);
 }
 
+@menu-bar: {
+    position: fixed;
+    background-color: @menu-bgcolor;
+    box-shadow: 3px 3px 3px @menu-shadowcolor;
+    height: @topscrollbtn-height;
+    width: calc(50vw - @topscrollbtn-width / 2);
+    text-align: center;
+    color:@submenu-bgcolor;
+    font-size: 0.9rem;
+    line-height: @topscrollbtn-height - @menu-lineheight;
+    z-index: @z-menu;
+}
+
+;
+#left-menu-bar {
+    @menu-bar();
+    right: 100vw;
+}
+
+#right-menu-bar {
+    @menu-bar();
+    left: 100vw;
+}
+
+.menu-item {
+    height: @topscrollbtn-height - @menu-lineheight;
+    font-family: adso, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.menu-item>div {
+    text-align: center;
+}
+
+.menu-line {
+    height: @menu-lineheight;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.menu-item:hover~.menu-line, .category-check:checked~.menu-line {
+    height: @menu-lineheight;
+    opacity: 1;
+}
+
+#toppage-toggle:checked~#left-menu-bar {
+    transform: translateX(calc(50vw - @topscrollbtn-width / 2));
+    transition: transform 0.8s cubic-bezier(.34, -0.29, .38, .8);
+}
+
+#toppage-toggle~#left-menu-bar {
+    transform: translateX(0);
+    transition: transform 0.8s cubic-bezier(.55, .02, .69, 1.15);
+}
+
+#toppage-toggle:checked~#right-menu-bar {
+    transform: translateX(calc(-1* (50vw - @topscrollbtn-width / 2)));
+    transition: transform 0.8s cubic-bezier(.34, -0.29, .38, .8);
+}
+
+#toppage-toggle~#right-menu-bar {
+    transform: translateX(0);
+    transition: transform 0.8s cubic-bezier(.55, .02, .69, 1.15);
+}
+
+#left-menu-bar div, #right-menu-bar div {
+    cursor: pointer;
+}
+
 #scroll-cnt {
     position: relative;
     top: 0px;
     left: 50%;
-    width: @topscrollbtn-wieth;
+    width: @topscrollbtn-width;
     height: @topscrollbtn-height;
-    margin-left: -@topscrollbtn-wieth/2;
+    margin-left: -@topscrollbtn-width/2;
     color: white;
     cursor: pointer;
 }
@@ -159,13 +282,13 @@ svg.toppage-wrap>rect {
 
 #toppage-contents>article>h1 {
     font-size: 1.3rem;
-    font-weight:@main-font-weight-strong;
+    font-weight: @main-font-weight-strong;
     text-align: center;
 }
 
 #toppage-contents>article>h2 {
     font-size: 1.3rem;
-    font-weight:@main-font-weight;
+    font-weight: @main-font-weight;
     background-color: @topcontents-accolor;
     padding: 1.5vw 0px;
     text-align: center;
