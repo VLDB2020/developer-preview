@@ -14,7 +14,7 @@
 // Grid
 
 @columns:       12;
-@gutterWidth:   36px;
+@gutterWidth:   0px;
 
 // Column size
 
@@ -22,9 +22,14 @@
 
 // Break-points
 
-@screenTablet: 	768px;
+@screenTablet: 	870px;
 @screenDesktop: 992px;
 @screenLarge:   1200px;
+
+.hide-phone{display:none;};
+@media (min-width: @screenTablet) {
+	.hide-phone{display:inline;};
+}
 
 
 //
