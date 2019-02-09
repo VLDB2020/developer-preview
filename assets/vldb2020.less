@@ -24,15 +24,20 @@
 //--
 //-- Menu Bar
 @menu-bgcolor: #f3f3f2;
-@submenu-bgcolor:#393f4c;
+@submenu-bgcolor: #393f4c;
 @menu-shadowcolor: rgba(0, 0, 0, 0.4);
 @menu-lineheight: 8px;
 @color-conference: @color-red;
 @color-contributions: @color-violet;
+@color-contributions-dark: darken(@color-contributions, 30%);
 @color-sponsorship: @color-blue;
+@color-sponsorship-dark: darken(@color-sponsorship, 30%);
 @color-information: @color-green;
+@color-information-dark: darken(@color-information, 30%);
 @color-4authors: @color-lightgreen;
+@color-4authors-dark: darken(@color-4authors, 30%);
 @color-4participants: @color-orange;
+@color-4participants-dark: darken(@color-4participants, 30%);
 //--
 //-- Top Page Settings
 @topmask-opacity: 0.6;
@@ -46,7 +51,8 @@
 //--
 //-- Z Indeies
 @z-menu: 100;
-@z-submenu: 99;
+@z-submenu: 90;
+@z-submask: 80;
 @z-bg: -100;
 @z-bgmask: -99;
 @z-contents: 0;
@@ -88,6 +94,26 @@ body {
 
 .bgcol-4participants {
     background: @color-4participants;
+}
+
+.bgcol-contributions-dark {
+    background: @color-contributions-dark;
+}
+
+.bgcol-sponsorship-dark {
+    background-color: @color-sponsorship-dark;
+}
+
+.bgcol-information-dark {
+    background-color: @color-information-dark;
+}
+
+.bgcol-4authors-dark {
+    background-color: @color-4authors-dark;
+}
+
+.bgcol-4participants-dark {
+    background: @color-4participants-dark;
 }
 
 .logo-font {
@@ -188,7 +214,7 @@ svg.toppage-wrap>rect {
     height: @topscrollbtn-height;
     width: calc(50vw - @topscrollbtn-width / 2);
     text-align: center;
-    color:@submenu-bgcolor;
+    color: @submenu-bgcolor;
     font-size: 0.9rem;
     line-height: @topscrollbtn-height - @menu-lineheight;
     z-index: @z-menu;
@@ -205,26 +231,98 @@ svg.toppage-wrap>rect {
     left: 100vw;
 }
 
+@submenu-panel: {
+    position: fixed;
+    bottom: 100vh;
+    width: calc(50vw + @topscrollbtn-width / 2);
+    text-align: center;
+    color: @color-white;
+    font-size: 0.9rem;
+    z-index: @z-submenu;
+    @media screen and (max-width: @screenTablet) {
+        width: 100vw;
+    }
+}
+
+;
+.left-submenu-panel {
+    @submenu-panel();
+    left: 0px;
+}
+
+.right-submenu-panel {
+    @submenu-panel();
+    right: 0px;
+}
+
+#submenu-contributions:checked~#submenu-panel-contributions {}
+
+.submenu-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: fadeout(@topmask-color, 20%);
+    z-index: @z-submask;
+    opacity: 0;
+    display: none;
+    transition: all 1s;
+}
+
 .menu-item {
     height: @topscrollbtn-height - @menu-lineheight;
     font-family: adso, sans-serif;
     font-weight: 500;
     font-style: normal;
-}
-
-.menu-item>div {
-    text-align: center;
+    cursor: pointer;
 }
 
 .menu-line {
     height: @menu-lineheight;
     opacity: 0;
     transition: all 1s;
+    cursor: pointer;
 }
 
-.menu-item:hover~.menu-line, .category-check:checked~.menu-line {
+.menu-item:hover~.menu-line, .category-active:checked~.menu-line {
     height: @menu-lineheight;
     opacity: 1;
+}
+
+.submenu-item {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.submenu-item:hover {
+    opacity: 1;
+}
+
+@submenu-close: {
+    position: relative;
+    top: 0px;
+    width: @topscrollbtn-width;
+    height: @topscrollbtn-height;
+    color: white;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+;
+.right-submenu-panel .submenu-close {
+    @submenu-close();
+    left: 0px;
+    @media screen and (max-width: @screenTablet) {
+        left: calc(50vw - @topscrollbtn-width / 2);
+    }
+}
+
+.left-submenu-panel .submenu-close {
+    @submenu-close();
+    left: calc(50vw - @topscrollbtn-width / 2);
 }
 
 #toppage-toggle:checked~#left-menu-bar {
@@ -247,11 +345,7 @@ svg.toppage-wrap>rect {
     transition: transform 0.8s cubic-bezier(.55, .02, .69, 1.15);
 }
 
-#left-menu-bar div, #right-menu-bar div {
-    cursor: pointer;
-}
-
-#scroll-cnt {
+.scroll-cnt {
     position: relative;
     top: 0px;
     left: 50%;
@@ -346,4 +440,8 @@ svg.scroll-btn #dot3 {
     80% {
         transform: translateY(-100px) scaleY(1.02);
     }
+}
+
+.link-disable {
+    cursor: not-allowed;
 }
