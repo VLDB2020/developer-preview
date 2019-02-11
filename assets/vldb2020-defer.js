@@ -10,13 +10,12 @@ const submenuToggle = (before, after) => {
     if (before === after) {
         after = null;
     }
-    console.log(before, "=>", after);
     if (after == null) {
         sequence.push(new Promise(resolve => {
             anime({
                 targets: "#submenu-mask",
                 opacity: 0.0,
-                duration: 500,
+                duration: 300,
                 complete: () => {
                     document.getElementById("submenu-mask").style.display = "none";
                     resolve();
@@ -42,15 +41,13 @@ const submenuToggle = (before, after) => {
     }
     if (after != null) {
         if (before == null) {
-            console.log("show mask");
             document.getElementById("submenu-mask").style.display = "block";
             sequence.push(
                 new Promise(resolve => {
-                    console.log("show mask --> go");
                     anime({
                         targets: "#submenu-mask",
                         opacity: 0.8,
-                        duration: 500,
+                        duration: 300,
                         complete: () => {
                             resolve();
                         }
@@ -59,9 +56,7 @@ const submenuToggle = (before, after) => {
             );
         }
         let panelID = 'submenu-panel-' + after;
-        console.log("show panel");
         sequence.push(new Promise(resolve => {
-            console.log("show panel --> " + panelID);
             document.getElementById(panelID).style.zIndex = 95;
             anime({
                 targets: '#' + panelID,
@@ -76,14 +71,12 @@ const submenuToggle = (before, after) => {
         })
         );
     }
-    console.log("start!");
     Promise.all(sequence).then(function (message) {
         submenuInAction = false;
-        console.log(message);	// [ "3秒経過", "1秒経過", "2秒経過", ]
     });
 }
 
-document.getElementById('submenu-mask').addEventListener('click', () => {
+const maskClear = () => {
     if (submenuInAction) {
         return;
     }
@@ -94,12 +87,20 @@ document.getElementById('submenu-mask').addEventListener('click', () => {
     let after = null;
     document.querySelector('input[name="submenu-active"]:checked').checked = false;
     submenuToggle(before, after);
-});
+}
+
+let sublinks = document.querySelectorAll('.submenu-item:not(.link-disable)');
+for (var c = 0; c < sublinks.length; c++) {
+    sublinks[c].addEventListener('click', maskClear);
+}
+
+document.getElementById('submenu-mask').addEventListener('click', maskClear);
 
 const menuItem = document.getElementsByClassName('submenu-toggle');
 for (let c = 0; c < menuItem.length; c++) {
     menuItem[c].addEventListener('click', (e) => {
         if (submenuInAction) {
+            e.stopPropagation();
             return;
         }
         let before = null;
@@ -125,6 +126,11 @@ document.onkeydown = (e) => {
                 return;
             }
         }
+        let el = document.getElementById('contents-body');
+        let height = parseInt(window.getComputedStyle(el).getPropertyValue('height'));
+        if (document.getElementById("toppage-toggle").checked && Math.ceil(el.scrollTop + height) < el.scrollHeight) {
+            return;
+        }
         document.getElementById("toppage-toggle").checked = !document.getElementById("toppage-toggle").checked;
     } else if (e.keyCode == '38') {
         let submenu = document.getElementsByClassName('submenu-active');
@@ -137,3 +143,38 @@ document.onkeydown = (e) => {
         }
     }
 };
+
+
+Barba.Pjax.start();
+Barba.Dispatcher.on('linkClicked', function () {
+    console.log("Click");
+});
+Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, container) {
+    //eval(container.querySelector("script").innerHTML);
+    const category = container.attributes['x-category'].value;
+    document.getElementById('toppage-cnt').setAttribute('class', category);
+    console.log(document.querySelector('input[name="submenu-active"][value="' + category + '"]'));
+    document.querySelector('input[name="category-active"][value="' + category + '"]').checked = true;
+});
+Barba.Prefetch.init();
+
+const categoryColors = {};
+(() => {
+    const col = document.getElementsByClassName('menu-line');
+    for (let c = 0; c < col.length; c++) {
+        let color = window.getComputedStyle(col[c]).getPropertyValue('background-color');
+        let category = col[c].parentNode.querySelector('label').attributes['x-category'].value;
+        categoryColors[category] = color;
+    }
+    let links = document.querySelectorAll('a[href]');
+    const cbk = function (e) {
+        if (e.currentTarget.href === window.location.href) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    };
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', cbk);
+    }
+})();
+

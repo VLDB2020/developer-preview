@@ -1,0 +1,53 @@
+#contents-body>header,#contents-body>main,#contents-body>footer{    
+    margin: auto;
+    padding: 1.5vw;
+    width: 90vw;
+    max-width: 800px;
+}
+
+#contents-body>main{
+    background-color: fadeout(@color-white, 3%);
+}
+
+.contents-header {
+    color: @color-white;
+    height: 10px;
+}
+
+.contents-footer {
+    color: @color-white;
+    font-size: .7rem;
+    .font-univia(200);
+}
+
+#contents-body {
+    overflow-y: auto;
+    height: calc(100vh - @topscrollbtn-height);
+}
+
+#contents-body article {
+    color: @color-black;
+
+}
+
+#contents-body article h1 {
+    .font-univia(900);
+}
+#contents-body article h2,
+#contents-body article h3,
+#contents-body article h4 {
+    .font-univia(700);
+}
+#contents-body article h5,
+#contents-body article h6 {
+    .font-univia(400);
+}
+
+each(@categories, {
+    #toppage-cnt.@{value} #contents-body .contents-header, #toppage-cnt.@{value} #contents-body .contents-footer{
+        background-color: extract(@categories-color, @index);
+    }
+    #toppage-cnt.@{value} .menu-btn svg.scroll-btn>rect{
+            fill:extract(@categories-color, @index);
+    }
+});

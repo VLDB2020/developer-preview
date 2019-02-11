@@ -1,1 +1,4 @@
-theme: jekyll-theme-tactile
+# Build settings
+markdown:            kramdown
+highlighter:         rouge
+permalink:           none
