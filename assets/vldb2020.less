@@ -1,6 +1,7 @@
 @import "fluidable";
 //-- Basic Color Scheme
-@color-white: white;
+@color-white: #f3f3f2;
+@color-black: #180614;
 @color-red: #a22041;
 @color-violet: #9d5b8b;
 @color-blue: #5654a2;
@@ -23,7 +24,7 @@
 @logo-smallfont-size: 16px;
 //--
 //-- Menu Bar
-@menu-bgcolor: #f3f3f2;
+@menu-bgcolor: @color-white;
 @submenu-bgcolor: #393f4c;
 @menu-shadowcolor: rgba(0, 0, 0, 0.4);
 @menu-lineheight: 8px;
@@ -56,6 +57,42 @@
 @z-bg: -100;
 @z-bgmask: -99;
 @z-contents: 0;
+//--
+//-- Categories
+@categories: conference, contirbutions, sponsorship, information, 4authors, 4participants;
+@categories-color:@color-conference,@color-contributions,@color-sponsorship,@color-information,@color-4authors,@color-4participants;
+// --
+// -- FONT
+@font-bungee:{
+    font-family: bungee, sans-serif;
+    font-weight: 400;//500
+    font-style: normal;
+}
+@font-museo:{
+    font-family: museo, serif;
+    font-weight: 100;//300,500,700,900
+    font-style: normal;//italic
+}
+.font-univia(@weight:400,@style:normal){
+    font-family: univia-pro, sans-serif;
+    font-weight: @weight;//200,400,700,900
+    font-style: @style;
+}
+@font-industry:{
+    font-family: industry, sans-serif;
+    font-weight: 400;//700
+    font-style: normal;//italic
+}
+@font-adso:{
+    font-family: adso, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+//
+//
+//
+
 html, div, body, article {
     margin: 0;
 }
@@ -218,6 +255,7 @@ svg.toppage-wrap>rect {
     font-size: 0.9rem;
     line-height: @topscrollbtn-height - @menu-lineheight;
     z-index: @z-menu;
+    user-select:none;
 }
 
 ;
@@ -236,9 +274,11 @@ svg.toppage-wrap>rect {
     bottom: 100vh;
     width: calc(50vw + @topscrollbtn-width / 2);
     text-align: center;
+    .font-univia();
     color: @color-white;
     font-size: 0.9rem;
     z-index: @z-submenu;
+    user-select:none;
     @media screen and (max-width: @screenTablet) {
         width: 100vw;
     }
@@ -255,7 +295,14 @@ svg.toppage-wrap>rect {
     right: 0px;
 }
 
-#submenu-contributions:checked~#submenu-panel-contributions {}
+.right-submenu-panel>a, .left-submenu-panel>a{
+    color: @color-white;
+    text-decoration: none;
+}
+label.menu-item>a{
+    color: @color-black;
+    text-decoration: none;
+}
 
 .submenu-mask {
     position: fixed;
@@ -297,7 +344,7 @@ svg.toppage-wrap>rect {
     opacity: 0.7;
 }
 
-.submenu-item:hover {
+.submenu-item:not(.link-disable):hover {
     opacity: 1;
 }
 
@@ -306,7 +353,7 @@ svg.toppage-wrap>rect {
     top: 0px;
     width: @topscrollbtn-width;
     height: @topscrollbtn-height;
-    color: white;
+    color: @color-white;
     cursor: pointer;
     transform: rotate(180deg);
 }
@@ -352,57 +399,8 @@ svg.toppage-wrap>rect {
     width: @topscrollbtn-width;
     height: @topscrollbtn-height;
     margin-left: -@topscrollbtn-width/2;
-    color: white;
+    color: @color-white;
     cursor: pointer;
-}
-
-#toppage-contents {
-    overflow-y: auto;
-    height: calc(100vh - @topscrollbtn-height);
-}
-
-#toppage-contents>article {
-    background-color: @topcontents-bgcolor;
-    margin: auto;
-    padding: 1.5vw;
-    width: 90vw;
-    max-width: 800px;
-    color: white;
-}
-
-#toppage-contents>article>:nth-child(0) {
-    margin-top: 0;
-}
-
-#toppage-contents>article>h1 {
-    font-size: 1.3rem;
-    font-weight: @main-font-weight-strong;
-    text-align: center;
-}
-
-#toppage-contents>article>h2 {
-    font-size: 1.3rem;
-    font-weight: @main-font-weight;
-    background-color: @topcontents-accolor;
-    padding: 1.5vw 0px;
-    text-align: center;
-}
-
-#toppage-contents>article>p {
-    font-weight: 100;
-    font-size: 1rem;
-    padding: 0px 3vw;
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-#toppage-contents>article>p>strong {
-    font-weight: 500;
-}
-
-svg.scroll-btn>rect {
-    fill: @topcontents-bgcolor;
-    fill-opacity: 0.9;
 }
 
 svg.scroll-btn>polyline {
@@ -444,4 +442,7 @@ svg.scroll-btn #dot3 {
 
 .link-disable {
     cursor: not-allowed;
+    opacity: 0.3;
 }
+
+@import "vldb2020-contents";
