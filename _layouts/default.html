@@ -13,7 +13,9 @@
     <div id="toppage-cnt" class="{{ page.category }}">
         {% include close.html %}
         <div id="contents-body">
-            <header class="contents-header"></header>
+            <header class="contents-header">
+                {% include header.html %}
+            </header>
             <main id="barba-wrapper">
                 <div class="barba-container" x-category="{{ page.category }}">
                     <article>
