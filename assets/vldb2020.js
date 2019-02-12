@@ -154,14 +154,11 @@ document.onkeydown = (e) => {
 };
 
 Barba.Pjax.start();
-Barba.Dispatcher.on('linkClicked', function () {
-    console.log("Click");
-});
+Barba.Dispatcher.on('linkClicked', function () {});
 Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, container) {
     //eval(container.querySelector("script").innerHTML);
     const category = container.attributes['x-category'].value;
     document.getElementById('toppage-cnt').setAttribute('class', category);
-    console.log(document.querySelector('input[name="submenu-active"][value="' + category + '"]'));
     document.querySelector('input[name="category-active"][value="' + category + '"]').checked = true;
     updateSocialShare();
 });
@@ -171,7 +168,6 @@ const categoryColors = {};
 (() => {
     const col = document.getElementsByClassName('menu-line');
     for (let c = 0; c < col.length; c++) {
-        console.log(col[c].parentNode);
         let color = window.getComputedStyle(col[c]).getPropertyValue('background-color');
         let category = col[c].parentNode.querySelector('label').attributes['x-category'].value;
         categoryColors[category] = color;
