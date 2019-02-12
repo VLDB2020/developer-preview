@@ -89,12 +89,13 @@ const maskClear = () => {
     submenuToggle(before, after);
 }
 
-let sublinks = document.querySelectorAll('.submenu-item:not(.link-disable)');
-for (var c = 0; c < sublinks.length; c++) {
-    sublinks[c].addEventListener('click', maskClear);
-}
-
-document.getElementById('submenu-mask').addEventListener('click', maskClear);
+(() => {
+    let sublinks = document.querySelectorAll('.submenu-item:not(.link-disable)');
+    for (var c = 0; c < sublinks.length; c++) {
+        sublinks[c].addEventListener('click', maskClear);
+    }
+    document.getElementById('submenu-mask').addEventListener('click', maskClear);
+})();
 
 const updateSocialShare = () => {
     const socialShare = document.getElementsByClassName('social-icon');
@@ -152,7 +153,6 @@ document.onkeydown = (e) => {
     }
 };
 
-
 Barba.Pjax.start();
 Barba.Dispatcher.on('linkClicked', function () {
     console.log("Click");
@@ -171,6 +171,7 @@ const categoryColors = {};
 (() => {
     const col = document.getElementsByClassName('menu-line');
     for (let c = 0; c < col.length; c++) {
+        console.log(col[c].parentNode);
         let color = window.getComputedStyle(col[c]).getPropertyValue('background-color');
         let category = col[c].parentNode.querySelector('label').attributes['x-category'].value;
         categoryColors[category] = color;
