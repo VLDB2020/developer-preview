@@ -6,7 +6,7 @@
                 expires: 7
             });
             if (videoPauseTimer === null) {
-                videoPauseTimer = window.setTimeout(() => { document.getElementById("toppage-video").pause() }, 1000);
+                videoPauseTimer = window.setTimeout(() => { document.getElementById("toppage-video").pause() }, 800);
             }
         } else {
             Cookies.remove('focus');
@@ -29,7 +29,7 @@
         });
         document.getElementById('toppage-toggle').checked = true;
     }
-    
+
     let submenuInAction = false;
     const submenuToggle = (before, after) => {
         before = before == 'conference' ? null : before;
