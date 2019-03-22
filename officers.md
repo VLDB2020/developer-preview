@@ -79,8 +79,8 @@ category: information
 
 ## PhD Workshop Chairs
 
+* Ziawasch Abedjan (TU Berlin)
 * Katja Hose (Aalborg University)
-* (TBD)
 
 ## Sponsorship Committee Chairs
 
@@ -106,9 +106,9 @@ category: information
 ## Web and SNS Committee 
 
 * Shohei Yokoyama (Tokyo Metropolitan University): <span class="h-font">Chair</span>
-* Kyoung-Sook Kim (AIST)
-* Steven Lynden (AIST)
-* Akiyoshi Matono (AIST)
+* Kyoung-Sook Kim (National Institute of Advanced Industrial Science and Technology)
+* Steven Lynden (National Institute of Advanced Industrial Science and Technology)
+* Akiyoshi Matono (National Institute of Advanced Industrial Science and Technology)
 
 ## Local Arrangement Committee
 
@@ -116,12 +116,14 @@ category: information
 * Masato Oguchi (Ochanomizu University)
 * Masashi Toyoda (University of Tokyo)
 * Chiemi Watanabe (University of Tsukuba)
-* Registration Chairs 
+
+## Registration Chairs 
+
 * Kaoru Katayama (Tokyo Metropolitan University)
 * Takashi Tomii (Yokohama National University)
 
 ## Domestic Advisory Board
 
-* Miyuki Nakano (Advanced Institute of Industrial Technolog)
+* Miyuki Nakano (Advanced Institute of Industrial Technology)
 * Haruo Yokota (Tokyo Institute of Technology)
 * Masatoshi Yoshikawa (Kyoto University)
