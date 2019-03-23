@@ -1,20 +1,30 @@
 (() => {
-    let videoPauseTimer = null;
+    let currentPlaybackRate = { value: 1 };
     document.getElementById("toppage-toggle").addEventListener('change', (event) => {
         if (event.target.checked) {
             Cookies.set('focus', 'contents', {
                 expires: 7
             });
-            if (videoPauseTimer === null) {
-                videoPauseTimer = window.setTimeout(() => { document.getElementById("toppage-video").pause() }, 800);
-            }
+            anime({
+                targets: currentPlaybackRate,
+                value: 0,
+                easing: 'linear',
+                duration: 3000,
+                update: function () {
+                    document.getElementById("toppage-video").playbackRate = (Math.round(currentPlaybackRate.value * 10)) / 10;
+                }
+            });
         } else {
             Cookies.remove('focus');
-            if (videoPauseTimer !== null) {
-                window.clearTimeout(videoPauseTimer);
-                videoPauseTimer = null;
-            }
-            document.getElementById("toppage-video").play();
+            anime({
+                targets: currentPlaybackRate,
+                value: 1,
+                easing: 'linear',
+                duration: 3000,
+                update: function () {
+                    document.getElementById("toppage-video").playbackRate = (Math.round(currentPlaybackRate.value * 10)) / 10;
+                }
+            });
             anime({
                 targets: '#contents-body',
                 scrollTop: 0,
@@ -27,6 +37,8 @@
         Cookies.set('focus', 'contents', {
             expires: 7
         });
+        currentPlaybackRate = { value: 0 };
+        document.getElementById("toppage-video").playbackRate = 0;
         document.getElementById('toppage-toggle').checked = true;
     }
 
