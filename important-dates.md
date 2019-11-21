@@ -47,8 +47,8 @@ TBD
 
 <div class="col-group important-dates">
     <div class="col-3 id-head">Chair</div>
-    <div class="col-9 id-col">Anastasia Ailamaki ([anastasia.ailamaki@epfl.ch](mailto:anastasia.ailamaki@epfl.ch))<br>
-Surajit Chaudhuri ([surajitc@microsoft.com](mailto:surajitc@microsoft.com>))</div>
+    <div class="col-9 id-col">Anastasia Ailamaki (<a href="mailto:anastasia.ailamaki@epfl.ch">anastasia.ailamaki@epfl.ch</a>)<br>
+Surajit Chaudhuri (<a href="mailto:surajitc@microsoft.com">surajitc@microsoft.com</a>)</div>
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Submission Deadline</div>
@@ -66,7 +66,7 @@ Surajit Chaudhuri ([surajitc@microsoft.com](mailto:surajitc@microsoft.com>))</di
     <div class="col-9 id-col">Wook-Shin Han (POSTECH)<br>
 Makoto Onizuka (Osaka University)<br>
 Nesime Tatbul (Intel Labs and MIT)<br>
- <i class="far fa-envelope"></i>Contacts: [vldb2020-workshops@googlegroups.com](mailto:vldb2020-workshops@googlegroups.com)</div>
+ <i class="far fa-envelope"></i>Contacts: (<a href="mailto:vldb2020-workshops@googlegroups.com">vldb2020-workshops@googlegroups.com</a>)</div>
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Submission Deadline</div>
