@@ -43,13 +43,39 @@ TBD
 
 TBD
 
-## Panels
+## Panel Proposals
 
-TBD
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Chair</div>
+    <div class="col-9 id-col">Anastasia Ailamaki ([anastasia.ailamaki@epfl.ch](mailto:anastasia.ailamaki@epfl.ch))<br>
+Surajit Chaudhuri ([surajitc@microsoft.com](mailto:surajitc@microsoft.com>))</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Submission Deadline</div>
+    <div class="col-9 id-col">February 28, 2020 (5 p.m. PST)</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Notification</div>
+    <div class="col-9 id-col">April 30, 2020</div>
+</div>
 
 ## Workshop Proposals
 
-TBD
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Chair</div>
+    <div class="col-9 id-col">Wook-Shin Han (POSTECH)<br>
+Makoto Onizuka (Osaka University)<br>
+Nesime Tatbul (Intel Labs and MIT)<br>
+ <i class="far fa-envelope"></i>Contacts: [vldb2020-workshops@googlegroups.com](mailto:vldb2020-workshops@googlegroups.com)</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Submission Deadline</div>
+    <div class="col-9 id-col">January 10, 2020 (5 p.m. PST)</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Notification</div>
+    <div class="col-9 id-col">April 30, 2020</div>
+</div>
 
 ## PhD Workshop Track
 
