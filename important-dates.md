@@ -10,7 +10,7 @@ category: forauthors
 
 
 <div class="col-group important-dates">
-    <div class="col-3 id-head">Chair</div>
+    <div class="col-3 id-head">Co-Chairs</div>
     <div class="col-9 id-col">Magdalena Balazinska (University of Washington)<br>
     Xiaofang Zhou (University of Queensland)</div>
 </div>
@@ -46,7 +46,7 @@ TBD
 ## Panel Proposals
 
 <div class="col-group important-dates">
-    <div class="col-3 id-head">Chair</div>
+    <div class="col-3 id-head">Co-Chairs</div>
     <div class="col-9 id-col">Anastasia Ailamaki (<a href="mailto:anastasia.ailamaki@epfl.ch">anastasia.ailamaki@epfl.ch</a>)<br>
 Surajit Chaudhuri (<a href="mailto:surajitc@microsoft.com">surajitc@microsoft.com</a>)</div>
 </div>
@@ -62,7 +62,7 @@ Surajit Chaudhuri (<a href="mailto:surajitc@microsoft.com">surajitc@microsoft.co
 ## Workshop Proposals
 
 <div class="col-group important-dates">
-    <div class="col-3 id-head">Chair</div>
+    <div class="col-3 id-head">Co-Chairs</div>
     <div class="col-9 id-col">Wook-Shin Han (POSTECH)<br>
 Makoto Onizuka (Osaka University)<br>
 Nesime Tatbul (Intel Labs and MIT)<br>
@@ -74,7 +74,7 @@ Nesime Tatbul (Intel Labs and MIT)<br>
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Notification</div>
-    <div class="col-9 id-col">April 30, 2020</div>
+    <div class="col-9 id-col">February 2, 2020</div>
 </div>
 
 ## PhD Workshop Track
