@@ -8,7 +8,10 @@ category: forauthors
 
 ## Research Track
 
-
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Call For Paper</div>
+    <div class="col-9 id-col"><a href="https://vldb2020.org/research-track.html">https://vldb2020.org/research-track.html</a></div>
+</div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Co-Chairs</div>
     <div class="col-9 id-col">Magdalena Balazinska (University of Washington)<br>
@@ -33,7 +36,34 @@ category: forauthors
 
 ## Industrial Track
 
-TBD
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Call For Paper</div>
+    <div class="col-9 id-col"><a href="https://vldb2020.org/industrial-track.html">https://vldb2020.org/industrial-track.html</a></div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Co-Chairs</div>
+    <div class="col-9 id-col">Tiziana Catarci (University of Rome La Sapienza, Italy)<br>Carlo Curino (Microsoft Research, USA)<br>Divesh Srivastava (AT&T Labs, USA)</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Submission Deadline</div>
+    <div class="col-9 id-col">Monday, February 24, 2020, PST</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">First Notification</div>
+    <div class="col-9 id-col">Thursday, April 23, 2020, PST</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Revision Submission</div>
+    <div class="col-9 id-col">Thursday, May 21, 2020, PST</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Final Notification</div>
+    <div class="col-9 id-col">Thursday, June 4, 2020, PST</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Camera-ready Deadline</div>
+    <div class="col-9 id-col">Monday, June 15, 2020, PST</div>
+</div>
 
 ## Demonstrations
 
@@ -45,6 +75,10 @@ TBD
 
 ## Panel Proposals
 
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Call For Proposals</div>
+    <div class="col-9 id-col"><a href="https://vldb2020.org/call4panel.html">https://vldb2020.org/call4panel.html</a></div>
+</div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Co-Chairs</div>
     <div class="col-9 id-col">Anastasia Ailamaki (<a href="mailto:anastasia.ailamaki@epfl.ch">anastasia.ailamaki@epfl.ch</a>)<br>
@@ -61,6 +95,10 @@ Surajit Chaudhuri (<a href="mailto:surajitc@microsoft.com">surajitc@microsoft.co
 
 ## Workshop Proposals
 
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Call For Proposals</div>
+    <div class="col-9 id-col"><a href="https://vldb2020.org/call4workshops.html">https://vldb2020.org/call4workshops.html</a></div>
+</div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Co-Chairs</div>
     <div class="col-9 id-col">Wook-Shin Han (POSTECH)<br>
