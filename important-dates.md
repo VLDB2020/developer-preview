@@ -67,7 +67,27 @@ category: forauthors
 
 ## Demonstrations
 
-TBD
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Call For Proposals</div>
+    <div class="col-9 id-col"><a href="https://vldb2020.org/call4demo.html">https://vldb2020.org/call4demo.html</a></div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Co-Chairs</div>
+    <div class="col-9 id-col">Yasuhiro Fujiwara  (<a href="mailto:yasuhiro.fujiwara.kh@hco.ntt.co.jp">yasuhiro.fujiwara.kh@hco.ntt.co.jp</a>)<br>
+Ioana Manolescu (<a href="mailto:ioana.manolescu@inria.fr">ioana.manolescu@inria.fr</a>)<br>Ying Zhang  (<a href="mailto:Ying.Zhang@uts.edu.au">Ying.Zhang@uts.edu.au</a>)</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Submission Deadline</div>
+    <div class="col-9 id-col">March  18, 2020 (5 p.m. PST)</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Notification</div>
+    <div class="col-9 id-col">May 20, 2020</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Camera-ready Deadline</div>
+    <div class="col-9 id-col">June 15, 2020</div>
+</div>
 
 ## Tutorials
 
