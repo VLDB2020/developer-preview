@@ -18,7 +18,7 @@ VLDB 2020 invites submissions for demo proposals on any topic of interest, broad
 
 ## Demo Proposals
 
-The proposal must describe the demonstrated system, and state the novelty and significance of the contribution to data management research, technologies, and/or its applications. The proposal should pay special attention to describing the exact demonstration scenarios for the given system. This should include how the audience will experience the demo, what kind of functionality is supported, user scenarios, interface and interaction options, etc. Proposals must be submitted in [camera-ready](https://vldb2020.org/formatting-guidelines.html) format and limited to 4 pages, inclusive of ALL material.
+The proposal must describe the demonstrated system, and state the novelty and significance of the contribution to data management research, technologies, and/or its applications. The proposal should pay special attention to describing the exact demonstration scenarios for the given system. This should include how the audience will experience the demo, what kind of functionality is supported, user scenarios, interface and interaction options, etc. Proposals must be submitted in [camera-ready format](https://vldb2020.org/formatting-guidelines.html) and limited to 4 pages, inclusive of ALL material.
 
 ## Video Submissions
 
@@ -46,9 +46,12 @@ Demonstration proposals must be submitted electronically, in PDF format, using [
 
 ## Demo Track Chairs
 
-* Yasuhiro Fujiwara (NTT Communication Science Laboratories, Japan), <yasuhiro.fujiwara.kh@hco.ntt.co.jp>
-* Ioana Manolescu (Inria and Ecole Polytechnique, France), <ioana.manolescu@inria.fr>
-* Ying Zhang (The University of Technology Sydney, Australia), <Ying.Zhang@uts.edu.au>
+* Yasuhiro Fujiwara (NTT Communication Science Laboratories, Japan)
+  * <yasuhiro.fujiwara.kh@hco.ntt.co.jp>
+* Ioana Manolescu (Inria and Ecole Polytechnique, France)
+  * <ioana.manolescu@inria.fr>
+* Ying Zhang (The University of Technology Sydney, Australia)
+  * <Ying.Zhang@uts.edu.au>
 
 ## Demo Track PC Members
 
