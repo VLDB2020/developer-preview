@@ -34,7 +34,7 @@ Candidates who have a clearly developed idea, who are formally considered by the
 
 Authors of accepted papers should incorporate the changes suggested by the reviewers and add the following copyright notice to the final version of the paper:
 
-> Proceedings of the VLDB 2020 PhD Workshop, August 31st, 2020. Los Angeles, California. Copyright (C) 2020 for this paper by its authors. Copying permitted for private and academic purposes.
+> Proceedings of the VLDB 2020 PhD Workshop, August 31st, 2020. Tokyo, Japan. Copyright (C) 2020 for this paper by its authors. Copying permitted for private and academic purposes.
 
 ## Further Information
 
