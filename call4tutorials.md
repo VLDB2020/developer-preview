@@ -46,4 +46,4 @@ If the proposal is accepted, at least one of the authors listed in the proposal 
 ## Tutorial Chairs
 
 * Michael J. Carey (University of California, Irvine)
-* Renée J. Miller (Northeastern University)
+* Ren&eacute;e J. Miller (Northeastern University)

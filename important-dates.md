@@ -99,7 +99,7 @@ Ioana Manolescu (<a href="mailto:ioana.manolescu@inria.fr">ioana.manolescu@inria
     <div class="col-3 id-head">Co-Chairs</div>
     <div class="col-9 id-col">
         Michael J. Carey (University of California, Irvine)<br>
-        Renée J. Miller (Northeastern University)
+        Ren&eacute;e J. Miller (Northeastern University)
     </div>
 </div>
 <div class="col-group important-dates">
@@ -186,4 +186,3 @@ Nesime Tatbul (Intel Labs and MIT)<br>
     <div class="col-3 id-head">Camera-ready copy due</div>
     <div class="col-9 id-col">June 10, 2020</div>
 </div>
-
