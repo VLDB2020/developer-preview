@@ -135,11 +135,11 @@ Nesime Tatbul (Intel Labs and MIT)<br>
     <div class="col-9 id-col">February 2, 2020</div>
 </div>
 
-## PhD Workshop
+## PhD Workshop Track
 
 <div class="col-group important-dates">
-    <div class="col-3 id-head">Call For Proposals</div>
-    <div class="col-9 id-col"><a href="https://vldb2020.org/call4workshops.html">https://vldb2020.org/phd-workshop.html</a></div>
+    <div class="col-3 id-head">Call For Paper</div>
+    <div class="col-9 id-col"><a href="https://vldb2020.org/phd-workshop.html">https://vldb2020.org/phd-workshop.html</a></div>
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Co-Chairs</div>
@@ -160,3 +160,4 @@ Nesime Tatbul (Intel Labs and MIT)<br>
     <div class="col-3 id-head">Camera-ready copy due</div>
     <div class="col-9 id-col">June 10, 2020</div>
 </div>
+
