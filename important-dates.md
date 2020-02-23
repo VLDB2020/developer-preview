@@ -45,8 +45,12 @@ category: forauthors
     <div class="col-9 id-col">Tiziana Catarci (University of Rome La Sapienza, Italy)<br>Carlo Curino (Microsoft Research, USA)<br>Divesh Srivastava (AT&T Labs, USA)</div>
 </div>
 <div class="col-group important-dates">
-    <div class="col-3 id-head">Submission Deadline</div>
+    <div class="col-3 id-head">Abstract Submission Deadline</div>
     <div class="col-9 id-col">Wednesday, February 26, 2020, 5pm Pacific Time</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Paper Submission Deadline</div>
+    <div class="col-9 id-col">Tuesday, March 3, 2020, 5pm Pacific Time <span class="badge">Extended!</span></div>
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">First Notification</div>
