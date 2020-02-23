@@ -1,5 +1,8 @@
 @contents-padding: 1.5vw;
-#contents-body>header, #contents-body>main, #contents-body>footer {
+
+#contents-body>header,
+#contents-body>main,
+#contents-body>footer {
     margin: auto;
     padding: @contents-padding;
     width: 90vw;
@@ -11,6 +14,7 @@
 }
 
 @social-icon-size: 30px;
+
 .contents-header {
     position: relative;
     color: @color-white;
@@ -35,6 +39,7 @@
     @social-icon();
     z-index: @z-social-icon;
     opacity: 0;
+
     &:hover {
         font-color: @color-blue;
     }
@@ -47,27 +52,24 @@
 
 @max-number-of-social-icon: 10;
 @selectors: range(@max-number-of-social-icon);
+
 each(@selectors, {
-    .contents-header #social-toggle~a:nth-of-type(@ {
-        value
+        .contents-header #social-toggle~a:nth-of-type(@{value}) {
+            @social-icon();
+            z-index:@z-social-icon;
+            transition: all 0.8s cubic-bezier(.34, -0.29, .38, .8);
+            opacity:0;
+        }
+
+        .contents-header #social-toggle:checked~a:nth-of-type(@{value}) {
+            transition: all 0.8s cubic-bezier(.24, .79, .25, 1.19);
+            transform: translateX(-1.5 * @value * @social-icon-size);
+            opacity:1;
+        }
     }
-    ) {
-        @social-icon();
-        z-index: @z-social-icon;
-        transition: all 0.8s cubic-bezier(.34, -0.29, .38, .8);
-        opacity: 0;
-    }
-    .contents-header #social-toggle:checked~a:nth-of-type(@ {
-        value
-    }
-    ) {
-        transition: all 0.8s cubic-bezier(.24, .79, .25, 1.19);
-        transform: translateX(-1.5 * @value * @social-icon-size);
-        opacity: 1;
-    }
-}
 
 );
+
 .contents-footer #footer-left {
     color: @color-white;
     font-size: .7rem;
@@ -98,17 +100,22 @@ each(@selectors, {
 
 #contents-body article {
     color: @color-black;
+
 }
 
 #contents-body article h1 {
     .font-univia(900);
 }
 
-#contents-body article h2, #contents-body article h3, #contents-body article h4, #contents-body .h-font {
+#contents-body article h2,
+#contents-body article h3,
+#contents-body article h4,
+#contents-body .h-font {
     .font-univia(700);
 }
 
-#contents-body article h5, #contents-body article h6 {
+#contents-body article h5,
+#contents-body article h6 {
     .font-univia(400);
 }
 
@@ -140,44 +147,31 @@ each(@selectors, {
 }
 
 each(@categories, {
-    #toppage-cnt.@ {
-        value
+        #toppage-cnt.@{value} #contents-body .contents-header, #toppage-cnt.@{value} #contents-body .contents-footer {
+            background-color: extract(@categories-color, @index);
+        }
+
+        #toppage-cnt.@{value} .menu-btn svg.scroll-btn>rect {
+            fill:extract(@categories-color, @index);
+        }
+
+        #toppage-cnt.@{value} blockquote {
+            padding:0px 10px;
+            border: 3px solid;
+            border-color:extract(@categories-color, @index);
+            background-color:fadeout(extract(@categories-color, @index), 90%);
+        }
+        #toppage-cnt.@{value} .badge {
+            padding: 3px 6px;
+            margin-right: 8px;
+            margin-left: 1px;
+            font-size: 75%;
+            color: white;
+            border-radius: 6px;
+            box-shadow: 0 0 3px #ddd;
+            white-space: nowrap;
+            background-color: fadeout(extract(@categories-color, @index), 90%);
+        }
     }
-    #contents-body .contents-header, #toppage-cnt.@ {
-        value
-    }
-    #contents-body .contents-footer {
-        background-color: extract(@categories-color, @index);
-    }
-    #toppage-cnt.@ {
-        value
-    }
-    .menu-btn svg.scroll-btn>rect {
-        fill: extract(@categories-color, @index);
-    }
-    #toppage-cnt.@ {
-        value
-    }
-    blockquote {
-        padding: 0px 10px;
-        border: 3px solid;
-        border-color: extract(@categories-color, @index);
-        background-color: fadeout(extract(@categories-color, @index), 90%);
-    }
-    #toppage-cnt.@ {
-        value
-    }
-    .badge {
-        padding: 3px 6px;
-        margin-right: 8px;
-        margin-left: 1px;
-        font-size: 75%;
-        color: white;
-        border-radius: 6px;
-        box-shadow: 0 0 3px #ddd;
-        white-space: nowrap;
-        background-color: fadeout(extract(@categories-color, @index), 90%);
-    }
-}
 
 );
