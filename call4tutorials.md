@@ -4,7 +4,7 @@ title: Call for Contributions - Workshops
 category: contributions
 ---
 
-# VLDB2020: Call for Contributions - Tutorials <span class="badge"> Deadline Extended!</span>
+# VLDB2020: Call for Contributions - Tutorials <span class="badge">Deadline Extended!</span>
 
 ## Information
 
