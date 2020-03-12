@@ -108,7 +108,7 @@ Ioana Manolescu (<a href="mailto:ioana.manolescu@inria.fr">ioana.manolescu@inria
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Submission Deadline</div>
-    <div class="col-9 id-col">March 12, 2020 (5 p.m. PST)</div>
+    <div class="col-9 id-col">March <s>12</s> 19, 2020 (5 p.m. PST)<span class="badge">Extended!</span></div>
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Notification</div>
